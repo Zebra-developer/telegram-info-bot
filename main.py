@@ -2,6 +2,7 @@ import os
 import telebot
 import requests
 from dotenv import load_dotenv
+from flask import Flask, request
 
 
 load_dotenv() 
@@ -9,6 +10,8 @@ load_dotenv()
 
 TOKEN = os.getenv('TOKEN') # подгружаем токен из пространства
 bot = telebot.TeleBot(TOKEN)
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')
+app = Flask(__name__)
 
 
 # /help команда вызова помощи по командам бота
@@ -98,6 +101,18 @@ def news_message(message):
     bot.send_message(message.chat.id, "🗞 Команда новостей в разработке.")
 
 
+@app.route(f'{TOKEN}', method=['POST'])
+def webhook():
+    json_str = request.get_data().decode('UTF-8')
+    update = telebot.types.Update.de_json(json_str)
+    bot.process_new_updates([update])
+    return 'ok', 200
+
+
 # Запуск
 print("Bot starting...")
-bot.polling()
+if __name__ == "__main__":
+    url = os.getenv("WEBHOOK_URL") 
+    bot.remove_webhook()
+    bot.set_webhook(url=f"{url}/{TOKEN}")
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000))
