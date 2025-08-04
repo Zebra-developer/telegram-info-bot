@@ -17,6 +17,7 @@
 - News API
 - ZenQuotes API
 - CBR JSON API
+- Flask
 
 ## 📦 Установка
 ```bash
