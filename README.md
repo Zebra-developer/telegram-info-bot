@@ -32,4 +32,9 @@
 ```bash
 git clone https://github.com/Zebra-developer/telegram-info-bot.git
 cd telegram-info-bot
+
 pip install -r requirements.txt
+
+
+✍️ Автор
+Zebra-developer
