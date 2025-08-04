@@ -101,7 +101,7 @@ def news_message(message):
     bot.send_message(message.chat.id, "🗞 Команда новостей в разработке.")
 
 
-@app.route(f'{TOKEN}', method=['POST'])
+@app.route(f'{TOKEN}', methods=['POST'])
 def webhook():
     json_str = request.get_data().decode('UTF-8')
     update = telebot.types.Update.de_json(json_str)
@@ -115,4 +115,5 @@ if __name__ == "__main__":
     url = os.getenv("WEBHOOK_URL") 
     bot.remove_webhook()
     bot.set_webhook(url=f"{url}/{TOKEN}")
+
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
