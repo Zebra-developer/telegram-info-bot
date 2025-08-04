@@ -99,4 +99,5 @@ def news_message(message):
 
 
 # Запуск
+print("Bot starting...")
 bot.polling()
