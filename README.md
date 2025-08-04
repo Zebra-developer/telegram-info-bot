@@ -33,6 +33,3 @@
 git clone https://github.com/Zebra-developer/telegram-info-bot.git
 cd telegram-info-bot
 pip install -r requirements.txt
-
-Бот задеплоен здесь:
- https://telegram-info-bot-wewp.onrender.com
