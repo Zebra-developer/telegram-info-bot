@@ -1,26 +1,38 @@
-# Telegram Info Bot 🤖
+# 🤖 Telegram Info Bot
 
-Многофункциональный Telegram-бот на Python. Поддерживает:
+Многофункциональный Telegram-бот на Python, развернутый на Render. Поддерживает полезные команды — от курса валют и погоды до случайных цитат.
 
-- 💬 `/quote` — цитата дня
-- 💵 `/usd` — курс доллара
-- 🌤 `/weather <город>` — текущая погода
-- 🗞 `/news` — главные новости
-- 🛠 `/help`, `/info` — описание и справка
+## 📌 Возможности
 
-## 🚀 Технологии
+- 💬 `/quote` — случайная цитата дня (ZenQuotes API)
+- 💵 `/usd` — курс доллара по ЦБ РФ (CBR JSON API)
+- 🌤 `/weather <город>` — текущая погода (OpenWeather API)
+- 🗞 `/news` — главные новости *(в разработке)*
+- 🛠 `/help`, `/info` — список команд и информация о боте
+
+---
+
+## 🚀 Используемые технологии
+
 - Python 3.x
 - [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI)
+- Flask — Webhook-сервер
 - requests
-- dotenv
-- OpenWeather API
-- News API
-- ZenQuotes API
-- CBR JSON API
-- Flask
+- python-dotenv
+- API-сервисы:
+  - [OpenWeatherMap](https://openweathermap.org/api)
+  - [ZenQuotes](https://zenquotes.io/)
+  - [ЦБ РФ JSON API](https://www.cbr-xml-daily.ru/)
+  - *(News API — в разработке)*
 
-## 📦 Установка
+---
+
+## 📦 Установка и запуск локально
+
 ```bash
 git clone https://github.com/Zebra-developer/telegram-info-bot.git
 cd telegram-info-bot
 pip install -r requirements.txt
+
+Бот задеплоен здесь:
+ https://telegram-info-bot-wewp.onrender.com
