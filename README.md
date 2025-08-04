@@ -38,5 +38,6 @@ pip install -r requirements.txt
 
 ✍️ Автор
 Zebra-developer
-Моя визитка - https://my-business-card-4qs2.onrender.com
+Моя визитка - [Zebra_developer](https://my-business-card-4qs2.onrender.com)
+
 
