@@ -1,6 +1,7 @@
 # 🤖 Telegram Info Bot
 
 Многофункциональный Telegram-бот на Python, развернутый на Render. Поддерживает полезные команды — от курса валют и погоды до случайных цитат.
+[Бот](https://t.me/USD_Weather_Quotable_bot)
 
 ## 📌 Возможности
 
@@ -38,4 +39,5 @@ git clone https://github.com/Zebra-developer/telegram-info-bot.git
 cd telegram-info-bot
 
 pip install -r requirements.txt
+
 
